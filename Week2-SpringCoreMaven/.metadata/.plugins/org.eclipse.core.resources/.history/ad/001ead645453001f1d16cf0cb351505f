@@ -1,0 +1,10 @@
+package com.library.aspect;
+
+import org.aspectj.lang.annotation.Aspect;
+
+@Aspect
+public class LoggingAspect {
+	public void LogBefore(JointPoint jp) {
+
+	}
+}

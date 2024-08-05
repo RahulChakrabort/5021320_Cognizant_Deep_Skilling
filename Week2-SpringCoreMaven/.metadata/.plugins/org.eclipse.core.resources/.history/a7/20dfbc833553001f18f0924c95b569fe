@@ -1,0 +1,15 @@
+package com.library.aspect;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+
+@Aspect
+public class LoggingAspect {
+	static int count = 0;
+
+	@Before("execution(* com.library.service.BookService.performService())")
+	public void logging() {
+		count++;
+		System.out.println("Executing... " + count + "th time...");
+	}
+}

@@ -1,0 +1,26 @@
+package com.library.service;
+
+import com.library.repository.BookRepository;
+
+public class BookService {
+	private BookRepository repository;
+
+	public BookService() {
+		super();
+	}
+
+	public BookService(BookRepository repository) {
+		System.out.println("-----Using Constructor-----");
+		this.repository = repository;
+	}
+
+	public void setBookRepository(BookRepository repository) {
+		System.out.println("-----Using Setter-----");
+		this.repository = repository;
+	}
+
+	public void performService() {
+		System.out.println("Service method called");
+		repository.performActions();
+	}
+}

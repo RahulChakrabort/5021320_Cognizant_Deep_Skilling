@@ -1,0 +1,7 @@
+package com.library.repository;
+
+public class BookRepository {
+	void performActions() {
+		System.out.println("Repository action performed");
+	}
+}

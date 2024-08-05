@@ -1,0 +1,21 @@
+package com.library.service;
+
+import com.library.repository.BookRepository;
+
+public class BookService {
+	private BookRepository repositoryWithCons;
+	private BookRepository repositoryWithSetter;
+
+	public BookService(BookRepository repositoryWithCons) {
+		this.repositoryWithCons = repositoryWithCons;
+	}
+
+	public void setBookRepository(BookRepository repositoryWithSetter) {
+		this.repositoryWithSetter = repositoryWithSetter;
+	}
+
+	public void performService() {
+		System.out.println("Service method called");
+		repositoryWithCons.performActions();
+	}
+}

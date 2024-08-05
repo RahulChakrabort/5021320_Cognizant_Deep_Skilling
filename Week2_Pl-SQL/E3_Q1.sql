@@ -1,0 +1,15 @@
+CREATE OR REPLACE PROCEDURE ProcessMonthlyInterest AS
+BEGIN
+	UPDATE ACCOUNTS 
+	SET BALANCE= BALANCE+(BALANCE*0.01)
+	WHERE ACCOUNTTYPE='Savings';
+	COMMIT;
+END;
+/
+
+
+BEGIN
+	ProcessMonthlyInterest;
+END;
+/
+	

@@ -1,4 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Prioritize Java files
 *.java linguist-language=Java
-*.js linguist-language=JavaScript
+
+# Exclude all JavaScript files from language statistics
+*.js linguist-vendored
+
